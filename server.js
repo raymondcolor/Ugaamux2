@@ -87,7 +87,7 @@ app.use('/clarkdashboard', dashb);
 
 //home page    
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
+    res.render('index');
 });
 //blog page
 app.get('/blog', (req, res) => {

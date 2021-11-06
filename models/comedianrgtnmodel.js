@@ -46,6 +46,10 @@ const comedianSchema = new mongoose.Schema({
     photo: {
         type: String,
     },
+    place: {
+        type: String,
+        trim: true,
+    },
 
 });
 comedianSchema.plugin(passportLM, {

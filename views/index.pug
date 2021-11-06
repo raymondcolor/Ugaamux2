@@ -1,0 +1,136 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title home
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(href='../Btrp/css/bootstrap.min.css' rel='stylesheet')
+  link(href='../css/style.css' rel='stylesheet')
+nav.navbar.navbar-expand-lg.my-bckgd
+  .container-fluid
+    a#spcleft-logo.navbar-brand.me-color(href='/')
+      img(src='./images/logo2.png' alt='ugaamux' width='60' height='60')
+    i.fa.fa-user-circle-o.user-icon
+      #dd.dropd
+        a.sign-btn(href='/signinpage/signin') Sign In
+    button.navbar-toggler.menu-border(type='button ' data-bs-toggle='collapse ' data-bs-target='#navbarNavAltMarkup ' aria-controls='navbarNavAltMarkup ' aria-expanded='false ' aria-label='Toggle navigation ')
+      .hmenu
+      .hmenu
+      .hmenu
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.left
+        a#active.nav-link.me-color(href='/') Home
+        a.nav-link.me-color(href='/artistspage/artist') Artists
+        a.nav-link.me-color(href='/comedianspage/comedian') Commedians
+        a.nav-link.me-color(href='/bandpage/band') Bands
+        a.nav-link.me-color(href='/aboutuspage/about') About Us
+        a.nav-link.me-color(href='/blog') Blog
+        a.nav-link.me-color(href='/contactUS/contactUs') Contact
+// this is aheader section
+section.header
+  .text-box
+    h1
+      | WELCOME TO 
+      span UGAAMUX.
+    p
+      | Welocme to the UGAAMUX the leading organisition that protects music artists, commedians, bands and documentaly creators in Uganda. join us today and get to know your rights about your creative work and protect your self from impasonators.
+    a.sign-btn2(href='/contactUS/contactUs') Get In Touch
+// artists sectoion on the home page
+.div-heading
+  h1 Artists
+.artis-container-home
+  .person-id(onclick="location.href='/vinka' ; " style='cursor: pointer; ')
+    .person-id-image
+      img(src='./images/artists/Vinka.jpg ' alt='artist ' height='280 ' width='280 ')
+      .triangle
+    .person-id-name
+      h3 Vinka
+  .person-id(onclick="location.href='#' ; " style='cursor: pointer; ')
+    .person-id-image
+      img(src='./images/artists/ray.jpg ' alt='artist ' height='280 ' width='280 ')
+      .triangle
+    .person-id-name
+      h3 Rayme
+  .person-id(onclick="location.href='/kenzo' ; " style='cursor: pointer; ')
+    .person-id-image
+      img(src='./images/artists/ken.jpg ' alt='artist ' height='280 ' width='280 ')
+      .triangle
+    .person-id-name
+      h3 Eddy Kenzo
+.see-more
+  a(href='/artistspage/artist') See more
+// commedian section on the home page
+.div-heading
+  h1 Commedians
+.artis-container-home
+  .person-id(onclick="location.href='/mpamile' ; " style='cursor: pointer; ')
+    .person-id-image
+      img(src='./images/commedy/mpamile.jpg ' alt='artist ' height='280 ' width='280 ')
+      .triangle
+    .person-id-name
+      h3 Tr Mpamile
+  .person-id(onclick="location.href='#' ; " style='cursor: pointer; ')
+    .person-id-image
+      img(src='./images/commedy/boys.jfif ' alt='artist ' height='280' width='280')
+      .triangle
+    .person-id-name
+      h3 Maulana &amp; Reign
+  .person-id(onclick="location.href='#' ; " style='cursor: pointer; ')
+    .person-id-image
+      img(src='./images/commedy/kiko.jpg' alt='artist ' height='280' width='280 ')
+      .triangle
+    .person-id-name
+      h3 Madrat &amp; Chiko
+.see-more
+  a(href=' /comedianspage/comedian') See more
+// this is a band section on the home page
+.div-heading
+  h1 Bands
+.band-container-home
+  .band-id(onclick="location.href='/afrigo' ; " style='cursor: pointer; ')
+    .band-id-image
+      img(src='./images/band/afrigo.jpeg ' alt='bands ' height='280 ' width='540')
+      .triangle
+    .band-id-name
+      h3 Afrigo band
+  .band-id(onclick="location.href='#' ; " style='cursor: pointer; ')
+    .band-id-image
+      img(src='./images/band/Qwela-band.jpg' alt='bands ' height='280 ' width='540')
+      .triangle
+    .band-id-name
+      h3 Qwela band
+.see-more
+  a(href='/bandpage/band') See more
+// this is a footer section
+.row
+  .footer.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1 Contact With US
+      span
+        | Email: 
+        a(href='# ') ugaamux@gmail.com
+      br
+      span
+        | Call: 
+        a(href='# ') 0785234859
+      br
+      span  Location:Kampala (UG)
+      br
+      i.fa.fa-facebook-square
+      i.fa.fa-whatsapp
+      i.fa.fa-twitter-square
+      i.fa.fa-instagram
+      i.fa.fa-linkedin-square
+  .footer-2.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1
+      a.footer-link(href='# ') Support
+      a.footer-link(href='# ') Artists
+      a.footer-link(href='# ') Comedians
+      a.footer-link(href='# ') Bands
+      a.footer-link(href='# ') AboutUs
+      a.footer-link(href='# ') Blog
+.copyright
+  p  &amp;#9400Sabiiti Raymond 2021
+script(src='../Btrp/js/bootstrap.min.js ')

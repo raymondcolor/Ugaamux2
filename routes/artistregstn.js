@@ -55,4 +55,6 @@ router.get('/profile', async(req, res) => {
         res.redirect('/signinpage/signin');
     }
 });
+
+
 module.exports = router;

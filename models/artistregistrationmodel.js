@@ -51,6 +51,10 @@ const artistSchema = new mongoose.Schema({
         type: String,
 
     },
+    place: {
+        type: String,
+        trim: true,
+    },
 });
 
 

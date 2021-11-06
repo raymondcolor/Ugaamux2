@@ -176,7 +176,7 @@ audio {
 }
 
 .image-div {
-    position: absolute;
+    position: relative;
     top: 230px;
     left: 250px;
     background-color: #14213d;
@@ -186,6 +186,16 @@ audio {
     text-align: center;
     box-sizing: border-box;
     padding-top: 50px;
+    animation: spin 20s infinite linear;
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
 }
 
 .image-div img {
