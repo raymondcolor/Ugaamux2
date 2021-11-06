@@ -1,0 +1,124 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title comedian registration
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(href='/Btrp/css/bootstrap.min.css' rel='stylesheet')
+  link(href='/css/style.css' rel='stylesheet')
+  link(href='/css/style3.css' rel='stylesheet')
+nav.navbar.navbar-expand-lg.my-bckgd
+  .container-fluid
+    a#spcleft-logo.navbar-brand.me-color(href='/')
+      img(src='/images/logo2.png' alt='ugaamux' width='60' height='60')
+    
+    button.navbar-toggler.menu-border(type='button ' data-bs-toggle='collapse ' data-bs-target='#navbarNavAltMarkup ' aria-controls='navbarNavAltMarkup ' aria-expanded='false ' aria-label='Toggle navigation ')
+      .hmenu
+      .hmenu
+      .hmenu
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.left
+        a.nav-link.me-color(href='/welcomeadmin') Admin
+        a.nav-link.me-color(href='/') Home
+        a.nav-link.me-color(href='/artistspage/artist') Artists
+        a.nav-link.me-color(href='/comedianspage/comedian') Commedians
+        a.nav-link.me-color(href='/bandpage/band') Bands
+        a.nav-link.me-color(href='/aboutuspage/about') About Us
+        a.nav-link.me-color(href='/blog') Blog
+        a.nav-link.me-color(href='/contactUS/contactUs') Contact
+        span
+          a#left-span-a(href='/registerartist/register')
+            | Registration 
+            .drop-links
+              a(href='/registerartist/register') Artist
+              a(href='/registercomedian/comedianrgtn') Comedian
+              a(href='/registerband/bandregistration') Band
+              a(href='/postblogpage/blog') Blog post
+              a(href='/registeradmin/adminregistration') Admin form
+
+// below is the artist and commedian registration form on the left and band on the right
+.regesteration-artist
+  form.form-left#formA_C(action='/registercomedian/comedianrgtn' name='form1' method='post'  enctype='multipart/form-data')
+    // 
+    h1  Comedians Registration
+    small#BN
+    .div-iputs
+      label(for='birthname')
+      input#birthname.long-input(type='text' name='birthname' placeholder='Birth Name')
+    small#SN
+    .div-iputs
+      label(for='stagename')
+      input#stagename.long-input(type='text' name='stagename' placeholder='Stage Name')
+    small#aid
+    .div-iputs
+      label(for='Aid')
+      input#Aid.short-input(type='text' name='ID' placeholder='ID')
+      small#nine
+      label(for='nin')
+      input#nin.short-input(type='text' name='Nin' placeholder='NIN')
+    .div-iputs
+      label#label-g(for='male') Male
+      input#male.gender(type='radio' name='gender' value='male')
+      label#label-g(for='female') Female
+      input#female.gender(type='radio' name='gender' value='female')
+    small#year
+    .div-iputs
+      small#plce
+      input.short-input(type='text' name='place' placeholder='District')
+      input#started.short-input(type='text' name='started' placeholder='Year started comedy')
+    small#cont
+    .div-iputs
+      label(for='contact')
+      input#contact.long-input(type='text' name='contact' placeholder='Phone')
+    small#Em
+    .div-iputs
+      label(for='email')
+      input#email.long-input(type='email' name='email' placeholder='Email')
+    small#pass
+    .div-iputs
+      label(for='password')
+      input#password.long-input(type='password' name='password' placeholder='Password')
+    .div-iputs
+      select#role.long-input(name='role')
+       option(value='comedian') comedian
+       
+    .div-iputs
+      label(for='bandicon')
+      input#bandicon.file-btn(type='file' name='photo')
+    .div-iputs
+      input.cuncle-btn(type='reset' value='Cancel')
+      input.submt-btn(onclick='validate()' type='button' value='Create Account')
+// this is a footer section
+.row
+  .footer.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1 Contact With US
+      span
+        | Email: 
+        a(href='# ') ugaamux@gmail.com
+      br
+      span
+        | Call: 
+        a(href='# ') 0785234859
+      br
+      span  Location:Kampala (UG)
+      br
+      i.fa.fa-facebook-square
+      i.fa.fa-whatsapp
+      i.fa.fa-twitter-square
+      i.fa.fa-instagram
+      i.fa.fa-linkedin-square
+  .footer-2.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1
+      a.footer-link(href='# ') Support
+      a.footer-link(href='# ') Artists
+      a.footer-link(href='# ') Comedians
+      a.footer-link(href='# ') Bands
+      a.footer-link(href='# ') AboutUs
+      a.footer-link(href='# ') Blog
+.copyright
+  p  &amp;#9400 made by sabiiti raymond 2021
+script(src='../js/register.js')
+script(src='../Btrp/js/bootstrap.min.js')

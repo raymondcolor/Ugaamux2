@@ -1,0 +1,1014 @@
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #fcecd7;
+    }
+    /* below is thee importing of the font that ii used in the project */
+    
+    @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;400;800&family=Montserrat:wght@100;200;300;500;700;900&display=swap');
+    .my-bckgd {
+        position: fixed;
+        top: 0;
+        background-color: #14213d;
+        height: 80px;
+        color: #fca311;
+        width: 100%;
+        z-index: 1;
+        /* This sets the background-color of the nave bar */
+    }
+    
+    #active {
+        /* nave links to be active to respective pages where your are */
+        color: white;
+        font-weight: 700;
+        font-size: 21px;
+    }
+    
+    .user-icon {
+        font-size: 30px;
+        position: relative;
+        /* stleyles the icon which on hover has the dignin link */
+    }
+    
+    .user-icon:hover .dropd {
+        display: block;
+    }
+    
+    .fa {
+        color: #fca311;
+        font-size: 24px;
+        margin: 4px;
+        cursor: pointer;
+    }
+    
+    .dropd {
+        /* styles the hover dropdown  for user icon */
+        position: absolute;
+        height: 170px;
+        width: 200px;
+        z-index: 1;
+        background-color: #14213d;
+        text-align: center;
+        display: none;
+    }
+    
+    p {
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        line-height: 28px;
+    }
+    
+    .left {
+        /* This sets the nav links to the right and the backgorund of the the link div on small screens */
+        position: absolute;
+        right: 7.5%;
+        background-color: #14213d;
+        margin-top: 0;
+    }
+    
+    #spcleft-logo {
+        /* this style applies to the logo image in the nav bar */
+        padding-left: 6%;
+        border-bottom: none;
+        margin-top: 0.5%;
+    }
+    
+    .me-color {
+        /* Sets the color of the nav links */
+        color: #fca311;
+        font-weight: 500;
+        font-size: 19px;
+    }
+    
+    .me-color:hover {
+        color: #fff;
+    }
+    
+    .hmenu {
+        /* This is adiv that makes my humberg menu icon */
+        display: block;
+        height: 3px;
+        width: 25px;
+        background-color: #fca311;
+        margin-bottom: 4px;
+    }
+    
+    .menu-border {
+        /* this sets the color on tthe humberg menu to be transparent */
+        color: transparent;
+        padding-top: 6px;
+    }
+    
+    .header {
+        /* this styles the header onthe home page */
+        position: relative;
+        display: flex;
+        height: 350px;
+        width: 100%;
+        background-size: cover;
+        background: linear-gradient( rgb(4, 9, 30, 0.8), rgb(4, 9, 30, 0.8)), url('/images/backgd.jpg');
+    }
+    
+    .header::before {
+        /* Makes aslightly diagonal line on my header section */
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: #fcecd7;
+        height: 300px;
+        width: 100%;
+        clip-path: polygon(100% 76%, 0% 100%, 100% 100%);
+    }
+    
+    .text-box {
+        /* This style the container with text in the header */
+        height: 300px;
+        width: 50%;
+        color: #fff;
+        margin-left: 7%;
+        margin-top: 7%;
+        animation: slide 2s;
+    }
+    
+    @keyframes slide {
+        /* this animation makes the text in the header to lfow from the negative left into the screen */
+        0% {
+            margin-left: -70%;
+        }
+        100% {
+            margin-left: 7%;
+        }
+    }
+    
+    .text-box h1 {
+        font-size: 2.5em;
+    }
+    
+    .text-box h1 span {
+        color: #fca311;
+    }
+    
+    .text-box p {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+    
+    .div-heading {
+        /* this styles the container with headingd on the home page */
+        font-size: 25px;
+        color: #14213d;
+        margin-left: 10%;
+        margin-top: 2%;
+        letter-spacing: -1px;
+    }
+    
+    .see-more a {
+        /* thisstyle is for the links for see more links on the home page */
+        text-decoration: none;
+        color: #fca311;
+        margin-left: 18%;
+        font-size: 20px;
+    }
+    
+    .see-more a:hover {
+        text-decoration: underline;
+        color: #14213d;
+        margin-top: -2%;
+    }
+    
+    .artis-container-home {
+        /* styles the container for artists on the home page */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 70%;
+        height: auto;
+        margin: auto;
+    }
+    
+    .commedy-container-home {
+        /* styles the container for acommedians on the home page */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+    
+    .band-container-home {
+        /* styles the container for bands on the home page */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 90%;
+        height: 400px;
+        margin: auto;
+    }
+    
+    .sign-btn {
+        /* This styles my sign in buuton */
+        display: inline-block;
+        background: transparent;
+        border: 2px solid #fca311;
+        text-decoration: none;
+        color: #fff;
+        width: 100px;
+        text-align: center;
+        padding: 10px;
+        font-size: 19px;
+        transition: 0.3s;
+        border-radius: 5px;
+        margin-top: 30%;
+    }
+    
+    .sign-btn:hover {
+        background-color: #fca311;
+        color: black;
+    }
+    
+    .sign-btn2 {
+        /* This styles my sign in buuton */
+        display: inline-block;
+        background: transparent;
+        border: 2px solid #fca311;
+        text-decoration: none;
+        color: #fff;
+        width: 20%;
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        transition: 0.3s;
+        border-radius: 5px;
+        margin-top: 8px;
+    }
+    
+    .sign-btn2:hover {
+        background-color: #fca311;
+        color: black;
+    }
+    
+    .our-work-aboutus {
+        /* This styles my about section */
+        height: 300px;
+        box-sizing: border-box;
+        margin-left: 10%;
+        margin-top: 4%;
+    }
+    
+    .our-work-aboutus h1 {
+        color: #14213d;
+    }
+    
+    .our-work-aboutus-pic {
+        /* This this a section in about containing the pic*/
+        height: 350px;
+        background-image: url('/images/aboutpic.jpg');
+        margin: auto;
+        margin-top: 4%;
+        background-repeat: no-repeat;
+        justify-content: center;
+    }
+    /*How it work section, the div that contains the text then the div that contains the pic*/
+    
+    .how-it-works {
+        height: 300px;
+        margin-top: 4%;
+        margin-left: 4%;
+        box-sizing: border-box;
+    }
+    
+    .how-it-works-pic {
+        height: 350px;
+        margin-top: 4%;
+        margin-left: 10%;
+    }
+    /*this is the footer styles below */
+    
+    .footer {
+        /*  footer and footer-2 are the containers that make up my footer */
+        height: 180px;
+        background-color: #14213d;
+        margin-top: 6%;
+        box-sizing: border-box;
+    }
+    
+    .footer-2 {
+        height: 180px;
+        background-color: #14213d;
+        margin-top: 6%;
+        box-sizing: border-box;
+    }
+    
+    .text-box-footer {
+        /* this styles the div that contains links and the email content in the footer */
+        margin-left: 15%;
+        width: 50%;
+        margin-top: 3%;
+    }
+    
+    .text-box-footer span {
+        color: white;
+    }
+    
+    .text-box-footer span a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    .text-box-footer span a:hover {
+        color: #fca311;
+    }
+    
+    .footer-link {
+        /* Styles the links in the footer */
+        color: white;
+        text-decoration: none;
+        display: block;
+        width: 15px;
+    }
+    
+    .footer-link:hover {
+        color: #fca311;
+        text-decoration: underline;
+    }
+    
+    .footer h1 {
+        font-size: 1.5em;
+        color: #fca311;
+        font-weight: 700;
+    }
+    
+    .copyright {
+        height: 50px;
+        box-sizing: border-box;
+        background-color: #253049;
+        color: white;
+        padding-top: 10px;
+        padding-left: 7.5%;
+    }
+    
+    .copyright p {
+        font-size: 0.7em;
+    }
+    /* 
+This is the quary for mobile responsiveness */
+    
+    @media screen and (max-width: 768px) {
+        .header {
+            height: 500px;
+        }
+        .text-box {
+            animation: slide 2s;
+            margin-left: 3%;
+        }
+        .left {
+            /* this sets the widith of the list items in the nav on small screens */
+            width: 50%;
+            text-align: center;
+            z-index: 1;
+        }
+        .text-box {
+            width: 85%;
+        }
+        .text-box h1 {
+            font-size: 2.5em;
+        }
+        .our-work-aboutus {
+            margin-left: 1%;
+        }
+        .how-it-works-pic {
+            margin-left: 3%;
+        }
+        .how-it-works {
+            margin-left: 8%;
+        }
+        .medium-pic-size {
+            width: 350px;
+        }
+        #spcleft-logo {
+            padding-left: 2%;
+        }
+        .text-box-footer {
+            margin-left: 7%;
+            width: 60%;
+        }
+        @keyframes slide {
+            /* this animation makes the text in the header to lfow from the negative left into the screen */
+            0% {
+                margin-left: -100%;
+            }
+            100% {
+                margin-left: 3%;
+            }
+        }
+        .g-i-t-btn {
+            /* this style appliess to the get in touch button in the gheader on yhe home  page */
+            font-size: 1em;
+            padding: 15px;
+            width: 30%;
+            position: absolute;
+            right: 4%;
+            bottom: 10%;
+        }
+        .get-in-touch {
+            margin-top: -18%;
+        }
+        .our-work-aboutus {
+            padding-left: 5%;
+        }
+    }
+    /* @media for smartphone for home page*/
+    
+    @media screen and (max-width: 576px) {
+        .header {
+            height: 500px;
+        }
+        .text-box {
+            animation: slide 2s;
+            margin-left: 3%;
+            width: 85%;
+            margin-top: 15%;
+        }
+        .left {
+            /* this sets the widith of the list items in the nav on small screens */
+            width: 50%;
+            text-align: center;
+            z-index: 1;
+        }
+        .text-box h1 {
+            font-size: 2.5em;
+        }
+        .our-work-aboutus {
+            margin-left: 1%;
+        }
+        .how-it-works-pic {
+            margin-left: 0%;
+        }
+        .how-it-works {
+            margin-left: 2%;
+        }
+        .text-box-footer {
+            margin-left: 4%;
+            width: 60%;
+        }
+        .footer {
+            margin-top: 0;
+        }
+        .footer-2 {
+            margin-top: 0;
+        }
+        .up-down {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .sign-btn {
+            padding: 6px;
+            width: 35%;
+            font-size: 1em;
+        }
+        .header::before {
+            display: none;
+        }
+        .get-in-touch {
+            clip-path: unset;
+            height: 150px;
+            text-align: center;
+            margin-top: 10%;
+        }
+        #spcleft-logo {
+            padding-left: 1%;
+        }
+        .medium-pic-size {
+            width: 300px;
+            margin-left: 8%;
+        }
+        .our-work-aboutus {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .how-it-works {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        @keyframes slide {
+            /* this animation makes the text in the header to lfow from the negative left into the screen */
+            0% {
+                margin-left: -100%;
+            }
+            100% {
+                margin-left: 3%;
+            }
+        }
+    }
+    /* below are the styles of my sign in pages */
+    
+    .sign-in {
+        /* This styles container for the form */
+        margin: 9% auto -3% auto;
+        height: 500px;
+        width: 30%;
+        background-color: #14213d;
+        border-radius: 40px;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 7%;
+        box-shadow: -5px 5px 37px 0px rgba(0, 0, 0, 0.75);
+    }
+    
+    .sign-in h1 {
+        color: #fca311;
+        font-size: 2.5em;
+    }
+    
+    label {
+        color: white;
+        font-size: 1.1em;
+    }
+    
+    .sign-iputs {
+        /* This styles my feilds for password and email in form */
+        width: 70%;
+        height: 40px;
+        margin-top: 5%;
+        margin-bottom: 3%;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        margin-left: 3%;
+        font-size: 1em;
+        padding-left: 3px;
+        text-align: center;
+    }
+    
+    .signinbutton {
+        /* This styles my button sign in form */
+        width: 40%;
+        border-radius: 30px;
+        color: white;
+        background-color: #fca311;
+        height: 45px;
+        margin-top: 13%;
+        font-size: 1.2em;
+        border: none;
+    }
+    /*This is the break point for he form page for atablets*/
+    
+    @media screen and (max-width: 768px) {
+        .sign-in {
+            /* This styles container for the form */
+            margin: 10% auto;
+            height: 500px;
+            width: 70%;
+        }
+        input[type='button'] {
+            /* This styles my button sign in form */
+            width: 50%;
+        }
+    }
+    /*This is the break point for he form page for smartphones*/
+    
+    @media screen and (max-width: 576px) {
+        .sign-in {
+            /* This styles container for the form */
+            margin: 10% auto;
+            height: 500px;
+            width: 100%;
+            border-radius: 0px;
+        }
+        input[type='button'] {
+            /* This styles my button sign in form */
+            width: 40%;
+            color: white;
+            height: 45px;
+            margin-top: 16%;
+            font-size: 1.2em;
+            border: none;
+        }
+    }
+    /* These down are the styles that styles my artist page */
+    
+    .small-header {
+        /* This style sets the small header on the about page */
+        height: 300px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        background: linear-gradient(rgb(4, 9, 30, 0.8), rgb(4, 9, 30, 0.8)), url('/images/artist\ header.jpg');
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+        padding-left: 7%;
+        padding-top: 11.5%;
+    }
+    
+    .small-header::before {
+        /* This style sets the slightly horizontal line on  small header on the about page */
+        content: '';
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: #fcecd7;
+        z-index: 1;
+        clip-path: polygon(100% 49%, 0 100%, 100% 100%);
+        z-index: 0;
+    }
+    
+    .small-header-commedy {
+        /* This style sets the small header on the commedy page */
+        height: 300px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        background: linear-gradient(rgb(4, 9, 30, 0.8), rgb(4, 9, 30, 0.8)), url('/images/commedy/cmdyback.jpg');
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+        padding-left: 7%;
+        padding-top: 11%;
+    }
+    
+    .small-header-commedy::before {
+        /* This style sets the slightly horizontal line on  small header on the commedy page */
+        content: '';
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: #fcecd7;
+        z-index: 1;
+        clip-path: polygon(100% 49%, 0 100%, 100% 100%);
+        z-index: 0;
+    }
+    
+    .small-header-commedy h2 {
+        /*styles the heading in the small header*/
+        color: #fca311;
+        font-size: 3em;
+        animation: slide-h2 1s;
+    }
+    
+    .small-header-band {
+        /* This style sets the small header on the band page */
+        height: 300px;
+        position: relative;
+        width: 100%;
+        display: flex;
+        background: linear-gradient(rgb(4, 9, 30, 0.6), rgb(4, 9, 30, 0.6)), url('/images/band/images\ \(6\).jfif');
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: center;
+        padding-left: 7%;
+        padding-top: 11.5%;
+    }
+    
+    .small-header-band::before {
+        /* This style sets the slightly horizontal line on  small header on the band page */
+        content: '';
+        height: 150px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: #fcecd7;
+        z-index: 1;
+        clip-path: polygon(100% 49%, 0 100%, 100% 100%);
+        z-index: 0;
+    }
+    
+    .small-header-band h2 {
+        /*styles the heading in the small header*/
+        color: #fca311;
+        font-size: 3em;
+        animation: slide-h2 1s;
+        margin-left: 1%;
+    }
+    
+    .small-header h2 {
+        /*styles the heading in the small header*/
+        color: #fca311;
+        font-size: 3em;
+        animation: slide-h2 1s;
+        margin-left: 1%;
+    }
+    
+    @keyframes slide-h2 {
+        /* this animation makes the heading in the header off the pages apart from the one on the home page             */
+        0% {
+            margin-left: -50%;
+        }
+        100% {
+            margin-left: 1%;
+        }
+    }
+    
+    .container {
+        /* This styles my container that contains artist images and names o the artist page */
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+        height: auto;
+        margin: 3% auto;
+        box-sizing: border-box;
+    }
+    
+    .person-id {
+        /* This is asmall container that has the image of an artist and the name */
+        height: 350px;
+        width: 280px;
+        margin: 2% auto;
+        transition: 0.6s;
+    }
+    
+    .person-id:hover {
+        margin-top: 1%;
+    }
+    
+    .person-id-image {
+        /* container that contains image in the person-id */
+        position: relative;
+        height: 280px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: #fca311;
+        border-radius: 30px 30px 0 0;
+    }
+    
+    .person-id-image img {
+        border-radius: 30px 30px 0 0;
+    }
+    
+    .person-id-image::before {
+        /* Atringle that is on the bottom of the image */
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 43%;
+        height: 20px;
+        width: 40px;
+        background-color: #14213d;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    
+    .person-id-name {
+        /* This style the container that contains the name */
+        height: 70px;
+        width: 100%;
+        background-color: #14213d;
+        color: #ffffff;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 5%;
+        border-radius: 0 0 30px 30px;
+    }
+    /*below are styles for the commedian page*/
+    
+    .container-band {
+        /* This styles my container that contains commedian images and names o the artist page */
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        height: auto;
+        margin: 3% auto;
+        box-sizing: border-box;
+    }
+    
+    .band-id {
+        /* This is asmall container that has the image of an band and the name */
+        height: 350px;
+        width: 540px;
+        margin: 2% auto;
+        transition: 0.7s;
+    }
+    
+    .band-id:hover {
+        margin-top: 1%;
+    }
+    
+    .band-id-image {
+        /* container that contains image in the band-id */
+        position: relative;
+        height: 280px;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+        background-color: #fca311;
+        border-radius: 30px 30px 0 0;
+    }
+    
+    .band-id-image img {
+        border-radius: 30px 30px 0 0;
+    }
+    
+    .band-id-image::before {
+        /* Atringle that is on the bottom of the image */
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 47%;
+        height: 20px;
+        width: 40px;
+        background-color: #14213d;
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    }
+    
+    .band-id-name {
+        /* This style the container that contains the name */
+        height: 70px;
+        width: 100%;
+        background-color: #14213d;
+        color: #ffffff;
+        text-align: center;
+        box-sizing: border-box;
+        padding-top: 3%;
+        border-radius: 0 0 30px 30px;
+    }
+    /* below are styles for the contact page */
+    
+    .contact {
+        /* this is the style of the containerb that contains the form on the contact page */
+        width: 45%;
+        height: 590px;
+        box-sizing: border-box;
+        margin: auto;
+        border: 2px solid #fca311;
+        border-radius: 30px;
+        padding-left: 5%;
+        padding-top: 2.5%;
+        margin-top: 10%;
+    }
+    
+    .formlable {
+        /* styles the labe for the inputs */
+        font-size: 18px;
+        color: #14213d;
+        margin-top: 5px;
+    }
+    
+    .contact-iputs {
+        /* input stles of the fform */
+        width: 95%;
+        height: 50px;
+        border-radius: 15px;
+        border: 1px solid;
+        outline: none;
+    }
+    
+    .contact-iputs2 {
+        width: 90%;
+    }
+    
+    .flex-name {
+        /* for the div that contains the input names */
+        display: flex;
+        width: 90%;
+    }
+    
+    #contact-email {
+        /* stlyes the email input on the contact us form */
+        width: 88%;
+        height: 50px;
+        border-radius: 0;
+        border: 1px solid;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: unset;
+        outline: yellow;
+        border-radius: 15px;
+    }
+    
+    .contact-textarea {
+        /* stlyes the text area input on the contact us form */
+        width: 88%;
+        height: 220px;
+        border-radius: 15px;
+        outline: none;
+    }
+    
+    .contact-button {
+        /* stlyes the send button input on the contact us form */
+        width: 120px;
+        padding: 10px;
+        background-color: #14213d;
+        color: #fca311;
+        border: none;
+        margin-left: 33%;
+        margin-bottom: 1%;
+        border-radius: 15px;
+    }
+    
+    .contact-button:hover {
+        background-color: #283c69;
+        color: #fca311;
+    }
+    
+    .drop-links {
+        /* stlyes the div in the registration dropdown menu */
+        position: absolute;
+        right: 5%;
+        width: 200px;
+        height: 220px;
+        background-color: #14213d;
+        box-sizing: border-box;
+        margin-top: 6px;
+        text-align: center;
+        display: none;
+    }
+    
+    .left span:hover .drop-links {
+        display: block;
+        color: white;
+    }
+    
+    .drop-links a {
+        /* stlyes the links in the registration dropdown menu */
+        text-decoration: none;
+        display: block;
+        color: #fca311;
+        padding: 5px;
+        margin-top: 1px;
+    }
+    
+    .drop-links a:hover {
+        background-color: #fca311;
+        color: #14213d;
+    }
+    
+    .left span {
+        font-size: 19px;
+        font-weight: 500;
+        margin-top: 1%;
+        margin-left: 5px;
+    }
+    
+    #left-span-a {
+        color: #fca311;
+        text-decoration: none;
+    }
+    /*below are the styles of the post blog page where the admin can post a blog*/
+    
+    .main-div-upload {
+        height: 540px;
+        width: 500px;
+        margin: auto;
+        margin-top: 12.5%;
+        position: relative;
+    }
+    
+    .upload-div {
+        height: 250px;
+        border: 2px solid #fca311;
+        width: 100%;
+        position: relative;
+    }
+    
+    .file {
+        display: none;
+    }
+    
+    .upload {
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background: #14213d;
+        opacity: 0.7;
+        position: absolute;
+        bottom: 0;
+        padding-top: 10px;
+        display: none;
+        transition: 0.9s;
+    }
+    
+    .upload-div:hover .upload {
+        display: block;
+    }
+    
+    .event {
+        color: #14213d;
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+    
+    .text-input-blog {
+        height: 200px;
+        width: 500px;
+    }
+    
+    .blog-button {
+        padding: 10px;
+        background: #14213d;
+        border: none;
+        color: white;
+        width: 100px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }

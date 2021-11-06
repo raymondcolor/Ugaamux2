@@ -1,0 +1,91 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title contact us
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(href='/Btrp/css/bootstrap.min.css' rel='stylesheet')
+  link(href='/css/style.css' rel='stylesheet')
+nav.navbar.navbar-expand-lg.my-bckgd
+  .container-fluid
+    a#spcleft-logo.navbar-brand.me-color(href='/')
+      img(src='/images/logo2.png' alt='ugaamux' width='60' height='60')
+    i.fa.fa-user-circle-o.user-icon
+      #dd.dropd
+        a.sign-btn(href='/signinpage/signin') Sign In
+    button.navbar-toggler.menu-border(type='button ' data-bs-toggle='collapse ' data-bs-target='#navbarNavAltMarkup ' aria-controls='navbarNavAltMarkup ' aria-expanded='false ' aria-label='Toggle navigation ')
+      .hmenu
+      .hmenu
+      .hmenu
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.left
+        a.nav-link.me-color(href='/') Home
+        a.nav-link.me-color(href='/artistspage/artist') Artists
+        a.nav-link.me-color(href='/comedianspage/comedian') Commedians
+        a.nav-link.me-color(href='/bandpage/band') Bands
+        a.nav-link.me-color(href='/aboutuspage/about') About Us
+        a.nav-link.me-color(href='/blog') Blog
+        a#active.nav-link.me-color(href='/contactUS/contactUs') Contact
+       
+section.contact
+  .boder
+    form#myform(action='/contactUS/contactUs' method='post' name='contactform')
+      .flex-name
+        .contact-iputs2
+          label.formlable(for='fname') First Name
+          br
+          input#fname.contact-iputs(type='text' name='fname')
+          br
+          small#error1
+        .contact-iputs2
+          label.formlable(for='lname') Last Name
+          br
+          input#lname.contact-iputs(type='text' name='lname')
+          br
+          small#error2
+      label.formlable(for='email') Email
+      br
+      input#contact-email(type='email' name='email')
+      br
+      small#error3
+      label.formlable(for='message') Message
+      br
+      textarea#massage.contact-textarea(name='message')
+      br
+      br
+      small#error4
+      input.contact-button(type='submit' value='Send')
+// this is a footer section
+.row
+  .footer.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1 Contact With US
+      span
+        | Email: 
+        a(href='# ') ugaamux@gmail.com
+      br
+      span
+        | Call: 
+        a(href='# ') 0785234859
+      br
+      span  Location:Kampala (UG)
+      br
+      i.fa.fa-facebook-square
+      i.fa.fa-whatsapp
+      i.fa.fa-twitter-square
+      i.fa.fa-instagram
+      i.fa.fa-linkedin-square
+  .footer-2.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1
+      a.footer-link(href='# ') Support
+      a.footer-link(href='# ') Artists
+      a.footer-link(href='# ') Comedians
+      a.footer-link(href='# ') Bands
+      a.footer-link(href='# ') AboutUs
+      a.footer-link(href='# ') Blog
+.copyright
+  p  &amp;#9400Sabiiti Raymond 2021
+script(src='/Btrp/js/bootstrap.min.js')
+script(src='/js/contact.js')

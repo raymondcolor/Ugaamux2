@@ -1,0 +1,165 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title dashbord
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(href='/Btrp/css/bootstrap.min.css' rel='stylesheet')
+  link(href='/css/style.css' rel='stylesheet')
+  link(href='/css/style3.css' rel='stylesheet')
+nav.navbar.navbar-expand-lg.my-bckgd
+  .container-fluid
+    a#spcleft-logo.navbar-brand.me-color(href='/')
+      img(src='/images/logo2.png' alt='ugaamux' width='60' height='60')
+    
+    button.navbar-toggler.menu-border(type='button ' data-bs-toggle='collapse ' data-bs-target='#navbarNavAltMarkup ' aria-controls='navbarNavAltMarkup ' aria-expanded='false ' aria-label='Toggle navigation ')
+      .hmenu
+      .hmenu
+      .hmenu
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.left
+        a.nav-link.me-color(href='/welcomeadmin') Admin
+        a.nav-link.me-color(href='/') Home
+        a.nav-link.me-color(href='/artistspage/artist') Artists
+        a.nav-link.me-color(href='/comedianspage/comedian') Commedians
+        a.nav-link.me-color(href='/bandpage/band') Bands
+        a.nav-link.me-color(href='/aboutuspage/about') About Us
+        a.nav-link.me-color(href='/blog') Blog
+        a.nav-link.me-color(href='/contactUS/contactUs') Contact
+        span
+          a#left-span-a(href='/registerartist/register')
+            | Registration 
+            .drop-links
+              a(href='/registerartist/register') Artist
+              a(href='/registercomedian/comedianrgtn') Comedian
+              a(href='/registerband/bandregistration') Band
+              a(href='/postblogpage/blog') Blog post
+              a(href='/registeradmin/adminregistration') Admin form
+.dash-h 
+  h1 Dashbord              
+.dash
+  h1 Artists
+  table.table
+    thead.thead-dark
+      tr
+        th Birth name
+        th Stage name
+        th Id
+        th Email
+        th Photo
+        th Options
+    tbody
+      if artists.length 
+      each artist in artists
+        tr
+          td #{artist.birthname}
+          td #{artist.stagename}
+          td #{artist.ID}
+          td #{artist.email}
+          td
+            img(src='/'+artist.artpic height='70px' width='70px')
+          td
+            a.update(href='/update'+artist._id)
+             i.fa.fa-pencil(aria-hidden='true')
+
+          td
+            form(action='/signinpage/deleteartist' method='post')
+              input(type="hidden" placeholder="" name="id"  value= artist.email)
+              button.delete(type='submit' value='Delete') 
+               i.fa.fa-trash-o(aria-hidden='true')
+
+              
+              
+.dash
+  h1 Comedians
+  table.table
+    thead.thead-dark
+      tr
+        th Birth name
+        th Stage name
+        th Id
+        th Email
+        th Photo
+        th Options
+    tbody
+      if comedians.length 
+      each comedian in comedians
+        tr
+          td #{comedian.birthname}
+          td #{comedian.stagename}
+          td #{comedian.ID}
+          td #{comedian.email}
+          td
+            img(src='/'+comedian.photo height='70px' width='70px')
+          td
+            a.update(href='/update' +comedian._id) 
+              i.fa.fa-pencil(aria-hidden='true')
+          td
+            form(action='/delete' method='post')
+              input(type="hidden" placeholder="" name="id"  value= comedian.email)
+              button.delete(type='submit' value='Delete') 
+                i.fa.fa-trash-o(aria-hidden='true')
+.dash
+  h1 Bands
+  table.table
+    thead.thead-dark
+      tr
+        th Band name
+        th Sponsers
+        th Number of members
+        th Email
+        th Photo
+        th Options
+    tbody
+      if bands.length 
+      each band in bands
+        tr
+          td #{band.bandname}
+          td #{band.bandsponsers}
+          td #{band.numberofmembers}
+          td #{band.email}
+          td
+            img(src='/'+band.bandicon height='70px' width='70px')
+          td
+            a.update(href='/update' +band._id) 
+             i.fa.fa-pencil(aria-hidden='true')
+          td
+            form(action='/delete' method='post')
+              input(type="hidden" placeholder="" name="id"  value= band.email)
+              button.delete(type='submit' value='Delete') 
+               i.fa.fa-trash-o(aria-hidden='true')
+
+.row
+  .footer.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1 Contact With US
+      span
+        | Email: 
+        a(href='# ') ugaamux@gmail.com
+      br
+      span
+        | Call: 
+        a(href='# ') 0785234859
+      br
+      span  Location:Kampala (UG)
+      br
+      i.fa.fa-facebook-square
+      i.fa.fa-whatsapp
+      i.fa.fa-twitter-square
+      i.fa.fa-instagram
+      i.fa.fa-linkedin-square
+  .footer-2.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1
+      a.footer-link(href='# ') Support
+      a.footer-link(href='# ') Artists
+      a.footer-link(href='# ') Commedians
+      a.footer-link(href='# ') Bands
+      a.footer-link(href='# ') AboutUs
+      a.footer-link(href='# ') Blog
+.copyright
+  p  &amp;#9400Sabiiti Raymond 2021
+script(src='../js/sign.js')
+script(src='../Btrp/js/bootstrap.min.js ')
+

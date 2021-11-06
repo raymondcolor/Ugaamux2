@@ -1,0 +1,245 @@
+.profile-container {
+    /* this styles the container that container that contains the about the owner of the account */
+    width: 100%;
+    height: 700px;
+}
+
+.profile {
+    /*  this style the div that contains the profile pic and the name for the owner f the account*/
+    margin: auto;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.profile-band {
+    /*  this style the div that contains the profile pic and the name for the owner f the account*/
+    margin: auto;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.pic {
+    /*  this style the div that contains the profile pic for the owner f the account*/
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 12%;
+}
+
+.pic-band {
+    /*  this style the div that contains the profile pic for the owner f the account*/
+    height: 300px;
+    width: 550px;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 12%;
+}
+
+.pic img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
+
+.pic-band img {
+    height: 300px;
+    width: 550px;
+    border-radius: 30px;
+}
+
+.profile h3 {
+    font-size: 30px;
+    color: #14213d;
+    margin-top: 10px;
+}
+
+.profile-band h3 {
+    font-size: 35px;
+    color: #14213d;
+    margin-top: 5px;
+}
+
+.about-artist {
+    margin: auto;
+    margin-top: 3%;
+}
+
+table {
+    width: 100%;
+    color: rgb(0, 0, 0);
+}
+
+#tble {
+    margin-left: 200px;
+}
+
+td {
+    padding: 6px;
+}
+
+.caption {
+    font-size: 30px;
+    color: #14213d;
+    margin-top: 20px;
+}
+
+.album {
+    /*  this style the div that contains that when hover album displays*/
+    width: 200px;
+    height: auto;
+    background-color: #fca311;
+    color: black;
+    padding: 6px;
+    padding-left: 17px;
+    box-sizing: border-box;
+    position: absolute;
+    display: none;
+    border-radius: 15px;
+}
+
+.songs {
+    /*  this style the div that contains that when hover songs  displays*/
+    width: 250px;
+    height: auto;
+    background-color: #fca311;
+    color: black;
+    padding: 6px;
+    padding-left: 17px;
+    box-sizing: border-box;
+    position: absolute;
+    display: none;
+    border-radius: 15px;
+}
+
+.sg {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.sg:hover .songs {
+    display: block;
+}
+
+audio {
+    width: 200px;
+    height: 50px;
+}
+
+
+/*below are the styles for the blog container on the blog page page*/
+
+.cntn-margin-top {
+    margin-top: 8%;
+}
+
+.blog {
+    height: 450px;
+}
+
+.blog-image {
+    height: 350px;
+}
+
+.blog-text {
+    height: 100px;
+}
+
+.blog-text a {
+    font-size: 19px;
+    color: #14213d;
+    font-weight: 700;
+}
+
+.blog-text a:hover {
+    color: #fca311;
+}
+
+#songupload {
+    display: none;
+}
+
+.fa-upload {
+    color: rgb(19, 18, 18);
+}
+
+
+/* styles for the welcome page for the admin */
+
+.main-welcome {
+    height: 650px;
+    width: 100%;
+    background: linear-gradient(rgb(4, 9, 30, 0.6), rgb(4, 9, 30, 0.6)), url('/images/wel.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.image-div {
+    position: absolute;
+    top: 230px;
+    left: 250px;
+    background-color: #14213d;
+    height: 300px;
+    width: 300px;
+    border-radius: 31% 69% 64% 36% / 41% 41% 59% 59%;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.image-div img {
+    height: 200px;
+    width: 200px;
+}
+
+.text-div {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    text-align: center;
+    color: #fff;
+}
+
+.text-div h1 {
+    font-size: 60px;
+    color: #fca311;
+    font-weight: 700;
+}
+
+.text-div h1 span {
+    color: #203f83;
+}
+
+.link-div {
+    height: auto;
+    width: 300px;
+    position: absolute;
+    top: 180px;
+    right: 310px;
+    text-align: center;
+}
+
+.link-div a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 12px;
+    background: transparent;
+    color: rgb(199, 198, 198);
+    margin: 8px 0 8px 0;
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid #fca311;
+    font-weight: 500;
+}
+
+.link-div a:hover {
+    background-color: #fca311;
+    color: black;
+}
+
+.logout {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+}

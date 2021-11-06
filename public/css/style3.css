@@ -1,0 +1,274 @@
+.regesteration-artist {
+    /*  this style the div that contains the form on the artist and commedian registration forms on their respective pages*/
+    width: 50%;
+    height: 680px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: -5px 5px 37px 0px rgba(0, 0, 0, 0.75);
+    margin: 4% auto;
+    margin-top: 12%;
+    padding-top: 60px;
+    position: relative;
+}
+
+.regesteration-band {
+    /*  this style the div that contains the form on the band registration*/
+    width: 50%;
+    height: 680px;
+    background-color: #fafafa;
+    box-sizing: border-box;
+    border-radius: 30px;
+    box-shadow: -5px 5px 37px 0px rgba(0, 0, 0, 0.75);
+    margin: 4% auto;
+    margin-top: 12%;
+    padding-top: 60px;
+}
+
+.div-inputs {
+    /* div that cotains tthe inputs to st them in line if they are two */
+    display: flex;
+    width: 100%;
+}
+
+.form-left {
+    /* makes the form to apear in the center of the container */
+    margin: auto;
+    width: 95%;
+    text-align: center;
+}
+
+.form-left h1 {
+    /* style the heading of the heading in the form */
+    font-size: 25px;
+    color: #fca311;
+    font-weight: 600;
+}
+
+.gender {
+    /* styles the radio buttons  */
+    margin-top: 4%;
+    height: 17px;
+    width: 17px;
+    color: black;
+}
+
+.long-input {
+    /* styles the inputs that take up full widith artist registration */
+    background: transparent;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #274179;
+    height: 20px;
+    width: 80%;
+    margin-top: 3.4%;
+}
+
+.short-input {
+    /* styles the inputs that take up half widith artisr registration*/
+    background: transparent;
+    outline: none;
+    color: black;
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #274179;
+    height: 20px;
+    width: 39%;
+    margin-top: 3.4%;
+}
+
+.long-input2 {
+    /* styles the inputs that take up full widith onthe band page for registration*/
+    background: transparent;
+    outline: none;
+    color: rgb(29, 29, 29);
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #1b3366;
+    height: 20px;
+    width: 80%;
+    margin-top: 3.4%;
+}
+
+.short-input2 {
+    /* styles the inputs that take up half widith onthe band page for registration*/
+    background: transparent;
+    outline: none;
+    color: rgb(58, 57, 57);
+    font-size: 15px;
+    border: none;
+    border-bottom: 1px solid #1b3366;
+    height: 20px;
+    width: 39%;
+    margin-top: 5%;
+}
+
+.submt-btn {
+    /* this style the submit button on the artist and commedia registratiion pages */
+    width: 30%;
+    padding: 12px;
+    background-color: #fca311;
+    border: none;
+    margin-top: 5%;
+    border-radius: 15px;
+    margin-left: 10px;
+    color: #fff;
+    margin-top: 5%;
+}
+
+.submt-btn:hover {
+    background-color: #fdc365;
+}
+
+.submt-btn2 {
+    /* styles the inputs that areee on the band page for registration*/
+    width: 30%;
+    padding: 12px;
+    background-color: #1b3366;
+    border: none;
+    margin-top: 2%;
+    border-radius: 15px;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.submt-btn2:hover {
+    background-color: #274179;
+}
+
+.cuncle-btn {
+    /* sets the cancel buttonn styles */
+    width: 20%;
+    padding: 12px;
+    background-color: #bb0404;
+    border: none;
+    margin-top: 2%;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.cuncle-btn:hover {
+    background-color: #d41b1b;
+}
+
+#label-g {
+    font-size: 0.8em;
+    color: black;
+}
+
+.file-btn {
+    /* styles the upload buttton on the band registration page */
+    border: 1px solid #1b3366;
+    margin-top: 3%;
+    font-size: 0.7em;
+}
+
+input[type="file"] {
+    /* styles the upload buttton on the band registration page */
+    background-color: #1b3366;
+    color: white;
+}
+
+#band-tittle {
+    color: #1b3366;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.sign-up-admin {
+    /* This styles container for the form */
+    margin: 9% auto -3% auto;
+    height: 450px;
+    width: 50%;
+    background-color: #ffffff;
+    border-radius: 40px;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 4%;
+    box-shadow: -5px 5px 37px 0px rgba(0, 0, 0, 0.75);
+}
+
+.sign-up-admin h1 {
+    font-size: 24px;
+    color: #1b3366;
+    font-weight: 600;
+}
+
+.sign-up-admin h6 {
+    font-size: 0.7em;
+    margin-top: 24px;
+}
+
+h6 span {
+    color: #000;
+    font-weight: 700;
+}
+
+
+/* 
+dashbord styles */
+
+.dash {
+    height: auto;
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    margin-left: 25px;
+}
+
+td {
+    color: #474747;
+    font-weight: 500;
+}
+
+.update .fa {
+    color: rgb(59, 59, 59);
+}
+
+.delete .fa:hover {
+    color: #fca311;
+}
+
+.update .fa:hover {
+    color: #fca311;
+}
+
+.delete {
+    border: none;
+}
+
+.delete .fa {
+    color: rgb(59, 59, 59);
+}
+
+thead {
+    background-color: #14213d;
+    color: white;
+    height: 40px;
+}
+
+.dash h1 {
+    font-size: 30px;
+    color: #3f3f3f;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.dash-h {
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    margin: 10% auto 0% auto;
+}
+
+.dash-h h1 {
+    color: #fca311;
+    font-weight: 700;
+    border: 2px solid #fca311;
+    padding: 20px;
+}
