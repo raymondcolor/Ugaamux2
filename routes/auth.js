@@ -47,7 +47,7 @@ router.get('/logout', (req, res) => {
     });
 });
 
-//for deleting the artist
+
 router.post('/deleteartist', async(req, res) => {
 
     if (req.session.user) {
