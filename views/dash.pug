@@ -36,29 +36,31 @@ nav.navbar.navbar-expand-lg.my-bckgd
               a(href='/registerband/bandregistration') Band
               a(href='/postblogpage/blog') Blog post
               a(href='/registeradmin/adminregistration') Admin form
-.dash-h 
+.dash-header 
   h1 Dashbord              
 .dash
   h1 Artists
   table.table
     thead.thead-dark
       tr
-        th Birth name
         th Stage name
-        th Id
+        th Contact
         th Email
+        th District
         th Photo
         th Options
     tbody
       if artists.length 
       each artist in artists
         tr
-          td #{artist.birthname}
           td #{artist.stagename}
-          td #{artist.ID}
+          td #{artist.contact}
           td #{artist.email}
+          td #{artist.place}
           td
             img(src='/'+artist.artpic height='70px' width='70px')
+          
+           
           td
             a.update(href='/update'+artist._id)
              i.fa.fa-pencil(aria-hidden='true')
@@ -75,21 +77,22 @@ nav.navbar.navbar-expand-lg.my-bckgd
   h1 Comedians
   table.table
     thead.thead-dark
-      tr
-        th Birth name
-        th Stage name
-        th Id
-        th Email
-        th Photo
-        th Options
+        tr
+          th Stage name
+          th Contact
+          th Email
+          th District
+          th Photo
+          
+          th Options
     tbody
       if comedians.length 
       each comedian in comedians
         tr
-          td #{comedian.birthname}
           td #{comedian.stagename}
-          td #{comedian.ID}
+          td #{comedian.contact}
           td #{comedian.email}
+          td #{comedian.place}
           td
             img(src='/'+comedian.photo height='70px' width='70px')
           td

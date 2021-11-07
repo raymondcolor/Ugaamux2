@@ -1,0 +1,181 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title dashbord
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+  link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+  link(href='/Btrp/css/bootstrap.min.css' rel='stylesheet')
+  link(href='/css/style.css' rel='stylesheet')
+  link(href='/css/style3.css' rel='stylesheet')
+nav.navbar.navbar-expand-lg.my-bckgd
+  .container-fluid
+    a#spcleft-logo.navbar-brand.me-color(href='/')
+      img(src='/images/logo2.png' alt='ugaamux' width='60' height='60')
+    
+    button.navbar-toggler.menu-border(type='button ' data-bs-toggle='collapse ' data-bs-target='#navbarNavAltMarkup ' aria-controls='navbarNavAltMarkup ' aria-expanded='false ' aria-label='Toggle navigation ')
+      .hmenu
+      .hmenu
+      .hmenu
+    #navbarNavAltMarkup.collapse.navbar-collapse
+      .navbar-nav.left
+        a.nav-link.me-color(href='/welcomeadmin') Admin
+        a.nav-link.me-color(href='/') Home
+        a.nav-link.me-color(href='/artistspage/artist') Artists
+        a.nav-link.me-color(href='/comedianspage/comedian') Commedians
+        a.nav-link.me-color(href='/bandpage/band') Bands
+        a.nav-link.me-color(href='/aboutuspage/about') About Us
+        a.nav-link.me-color(href='/blog') Blog
+        a.nav-link.me-color(href='/contactUS/contactUs') Contact
+        span
+          a#left-span-a(href='/registerartist/register')
+            | Registration 
+            .drop-links
+              a(href='/registerartist/register') Artist
+              a(href='/registercomedian/comedianrgtn') Comedian
+              a(href='/registerband/bandregistration') Band
+              a(href='/postblogpage/blog') Blog post
+              a(href='/registeradmin/adminregistration') Admin form
+
+div.form-row
+  div.updatepic
+    img(src='/'+artist.artpic)
+form.updatef(method="post" action="" )
+        table.table
+            thead
+                tr
+                    th Stage name
+                    td 
+                       input.form-control( value=artist.stagename name ="stage name")
+                tr
+                    th Number of albums
+                    td 
+                        input.form-control(value=artist.album name ="albums")
+                tr
+                    th Email
+                    td 
+                        input.form-control(value=artist.email name ="email")
+                
+                tr
+                    th Contact
+                    td 
+                        input.form-control(value=artist.contact name ="contact")
+                tr
+                    th District
+                    td 
+                        select.form-control( name="place")  
+                            option(value="Mbarara" selected = artist.place === "Mbarara"  ) Mbarara
+                            option(value="Kampala" selected = artist.place === "Kampala" ) Kampala
+                            option(value="Gulu" selected = artist.place === "Gulu") Gulu
+                            option(value="Wakiso" selected = artist.place === "Wakiso" ) Wakiso
+                            option(value="Jinja" selected = artist.place === "Jinja" ) Jinja
+                            option(value="Masaka" selected = artist.place === "Masaka" ) Masaka
+                            option(value="Mbale" selected = artist.place === "Mbale" ) Mbale
+                tr
+                    td(colspan=2)
+                        button.btn.btn-dark.update-btn(type="submit") Update
+
+//- div.form-row
+//-         //- img(src='/'+artist.artpic width="100px" height="100px")
+//- form#marg.updatef(method="post" )
+//-         table.table
+//-             thead
+//-                 tr
+//-                     th Stage name
+//-                     td 
+//-                        input.form-control( name ="stagename")
+                
+//-                 tr
+//-                     th Email
+//-                     td 
+//-                         input.form-control( name ="email")
+                
+//-                 tr
+//-                     th Contact
+//-                     td 
+//-                         input.form-control( name ="contact")
+//-                 tr
+//-                     th District
+//-                     td 
+//-                         select.form-control(name="place")  
+//-                             option(value="Mbarara"  ) Mbarara
+//-                             option(value="Kampala"  ) Kampala
+//-                             option(value="Gulu" ) Gulu
+//-                             option(value="Wakiso"  ) Wakiso
+//-                             option(value="Jinja"  ) Jinja
+//-                             option(value="Masaka"  ) Masaka
+//-                             option(value="Mbale"  ) Mbale
+//-                 tr
+//-                     td(colspan=2)
+//-                         button.btn.btn-dark.update-btn(type="submit") Update
+
+//- div.form-row
+//-         //- img(src='/'+artist.artpic width="300px" height="200px")
+//- form#marg.updatef(method="post" )
+//-         table.table
+//-             thead
+//-                 tr
+//-                     th Band name
+//-                     td 
+//-                        input.form-control( name ="stage name")
+//-                 tr
+//-                     th Number of Memberss
+//-                     td 
+//-                         input.form-control( name ="numberofmembers")
+//-                 tr
+//-                     th Email
+//-                     td 
+//-                         input.form-control( name ="email")
+                
+//-                 tr
+//-                     th Members
+//-                     td 
+//-                         input.form-control( name ="members")
+//-                 tr
+//-                     th Band home
+//-                     td 
+//-                         select.form-control(name="home")  
+//-                             option(value="Mbarara"  ) Mbarara
+//-                             option(value="Kampala"  ) Kampala
+//-                             option(value="Gulu" ) Gulu
+//-                             option(value="Wakiso"  ) Wakiso
+//-                             option(value="Jinja"  ) Jinja
+//-                             option(value="Masaka"  ) Masaka
+//-                             option(value="Mbale"  ) Mbale
+//-                 tr
+//-                     td(colspan=2)
+//-                         button.btn.btn-dark.update-btn(type="submit") Update
+
+.row
+  .footer.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1 Contact With US
+      span
+        | Email: 
+        a(href='# ') ugaamux@gmail.com
+      br
+      span
+        | Call: 
+        a(href='# ') 0785234859
+      br
+      span  Location:Kampala (UG)
+      br
+      i.fa.fa-facebook-square
+      i.fa.fa-whatsapp
+      i.fa.fa-twitter-square
+      i.fa.fa-instagram
+      i.fa.fa-linkedin-square
+  .footer-2.col-lg-6.col-md-6.col-sm-12
+    .text-box-footer
+      h1
+      a.footer-link(href='# ') Support
+      a.footer-link(href='# ') Artists
+      a.footer-link(href='# ') Commedians
+      a.footer-link(href='# ') Bands
+      a.footer-link(href='# ') AboutUs
+      a.footer-link(href='# ') Blog
+.copyright
+  p  &amp;#9400Sabiiti Raymond 2021
+script(src='../js/sign.js')
+script(src='../Btrp/js/bootstrap.min.js ')

@@ -14,6 +14,7 @@ const comed = require('./routes/comedian');
 const bandb = require('./routes/band');
 const artists = require('./routes/artists');
 const Band = require('./routes/bandprofile');
+const Update = require('./routes/update');
 
 
 const User = require('./models/usermodel');
@@ -83,6 +84,7 @@ app.use('/bandpage', bandb);
 app.use('/artistspage', artists);
 app.use('/bandprofile', Band);
 app.use('/clarkdashboard', dashb);
+app.use('/updateprofile', Update);
 
 
 //home page    

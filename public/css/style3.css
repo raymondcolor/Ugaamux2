@@ -259,16 +259,58 @@ thead {
     margin-left: 25px;
 }
 
-.dash-h {
+.dash-header {
     text-align: center;
     height: 100px;
     width: 300px;
-    margin: 10% auto 0% auto;
+    margin: 170px auto 50px auto;
 }
 
-.dash-h h1 {
+.dash-header h1 {
     color: #fca311;
     font-weight: 700;
     border: 2px solid #fca311;
     padding: 20px;
+}
+
+.updatef {
+    width: 50%;
+    margin: 4% auto 1% auto;
+}
+
+.update-btn {
+    background-color: #fca311;
+    width: 100%;
+    color: #1b3366;
+    transition: 1s;
+    font-weight: 700;
+    height: 60px;
+}
+
+.update-btn:hover {
+    background-color: transparent;
+    border: 1px solid #fca311;
+}
+
+.updatef th {
+    border-radius: 10px;
+}
+
+#marg {
+    margin-top: 4%;
+}
+
+.updatepic {
+    height: 250px;
+    width: 250px;
+    margin: auto;
+    margin-left: 43%;
+    margin-top: 10%;
+    border-radius: 50%;
+}
+
+.updatepic img {
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
 }

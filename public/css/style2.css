@@ -186,9 +186,11 @@ audio {
     text-align: center;
     box-sizing: border-box;
     padding-top: 50px;
-    animation: spin 20s infinite linear;
+    animation: spin 30s infinite linear;
 }
 
+
+/* 
 @keyframes spin {
     0% {
         -webkit-transform: rotate(0deg);
@@ -196,7 +198,7 @@ audio {
     100% {
         -webkit-transform: rotate(360deg);
     }
-}
+} */
 
 .image-div img {
     height: 200px;
