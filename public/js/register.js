@@ -36,29 +36,34 @@ const key = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
 const Date =
     /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[13-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
 
-const validate = () => {
+const validate = (event) => {
     //validation for the birthname
+    let Isvalid = true;
     const birthnameC_A = Bname.value.trim();
     if (birthnameC_A == '') {
         Bname.style = 'border-bottom: 1px solid red';
         BNerror.innerHTML = 'enter birthname';
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Bname.focus();
+        Isvalid = false;
     } else if (!(birthnameC_A.length > 1)) {
         Bname.style = 'border-bottom:1px solid red';
         BNerror.innerHTML = 'should be be more than one letter';
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Bname.focus();
+        Isvalid = false;
     } else if (birthnameC_A.match(nonumber)) {
         Bname.style = 'border-bottom: 1px solid red';
         BNerror.innerHTML = 'should not contain a number';
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Bname.focus();
+        Isvalid = false;
     } else if (!birthnameC_A.match(capitalize)) {
         Bname.style = 'border-bottom: 1px solid red';
         BNerror.innerHTML = 'should start with capital';
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Bname.focus();
+        Isvalid = false;
     } else {
         Bname.style.border = ' 1px solid green';
     }
@@ -70,21 +75,25 @@ const validate = () => {
         SNerror.innerHTML = 'enter stagename';
         SNerror.style = 'color:red; position:absolute; font-size:0.7em;';
         Sname.focus();
+        Isvalid = false;
     } else if (!(stagenameC_A.length > 3)) {
         Sname.style = 'border-bottom:1px solid red';
         SNerror.innerHTML = 'should be be more than three letter';
         SNerror.style = 'color:red; position:absolute; font-size:0.7em;';
         Sname.focus();
-    } else if (!stagenameC_A.match(alphaNumeric)) {
-        Sname.style = 'border-bottom: 1px solid red';
-        SNerror.innerHTML = 'should be alphanumeric';
-        SNerror.style = 'color:red; position:absolute; font-size:0.7em';
-        Sname.focus();
+        Isvalid = false
     } else if (!stagenameC_A.match(capitalize)) {
         Sname.style = 'border-bottom: 1px solid red';
         SNerror.innerHTML = 'should start with capital';
         SNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Sname.focus();
+        Isvalid = false;
+    } else if (!stagenameC_A.match(capitalize)) {
+        Sname.style = 'border-bottom: 1px solid red';
+        SNerror.innerHTML = 'should start with capital';
+        SNerror.style = 'color:red; position:absolute; font-size:0.7em';
+        Sname.focus();
+        Isvalid = false;
     } else {
         Sname.style.border = ' 1px solid green';
     }
@@ -96,22 +105,26 @@ const validate = () => {
         iderror.innerHTML = 'enter ID';
         iderror.style = 'color:red; position:absolute;  left:20%;  font-size:0.7em';
         id.focus();
+        Isvalid = false;
     } else if (!(ID.length > 3)) {
         id.style = 'border-bottom:1px solid red';
         iderror.innerHTML =
             'should be be more than three characters';
         iderror.style = 'color:red; position:absolute; font-size:0.7em';
         id.focus();
+        Isvalid = false;
     } else if (!ID.match(systemIDFormat)) {
         id.style = 'border-bottom: 1px solid red';
         iderror.innerHTML = 'should not contain a number';
         iderror.style = 'color:red; position:absolute; font-size:0.7em';
         id.focus();
+        Isvalid = false;
     } else if (!ID.match(capitalize)) {
         id.style = 'border-bottom: 1px solid red';
         iderror.innerHTML = 'should start with capital';
         iderror.style = 'color:red; position:absolute; font-size:0.7em';
         id.focus();
+        Isvalid = false;
     } else {
         id.style.border = ' 1px solid green';
     }
@@ -123,11 +136,13 @@ const validate = () => {
         ninerror.innerHTML = 'enter NIN';
         ninerror.style = 'color:red; position:absolute; font-size:0.7em';
         nIN.focus();
+        Isvalid = false;
     } else if (!NIN.match(nationalIDFormat)) {
         nIN.style = 'border-bottom: 1px solid red';
         ninerror.innerHTML = 'start with 2 capital-digits-3 capital leters';
         ninerror.style = 'color:red; position:absolute; font-size:0.7em';
         nIN.focus();
+        Isvalid = false;
     } else {
         nIN.style.border = ' 1px solid green';
     }
@@ -139,11 +154,13 @@ const validate = () => {
         stays.innerHTML = 'enter place where you stay';
         stays.style = 'color:red; position:absolute; font-size:0.7em';
         Place.focus();
+        Isvalid = false;
     } else if (!PlaCe.match(capitalize)) {
         Place.style = 'border-bottom: 1px solid red';
         stays.innerHTML = 'should start with capital';
         stays.style = 'color:red; position:absolute; font-size:0.7em';
         Place.focus();
+        Isvalid = false;
     } else {
         Place.style.border = ' 1px solid green';
     }
@@ -155,11 +172,13 @@ const validate = () => {
         yerror.innerHTML = 'enter date you started';
         yerror.style = 'color:red; position:absolute; font-size:0.7em';
         ystart.focus();
+        Isvalid = false;
     } else if (!Began.match(Date)) {
         ystart.style = 'border-bottom: 1px solid red';
         yerror.innerHTML = 'date format DD/MM/YYYY';
         yerror.style = 'color:red; position:absolute; font-size:0.7em';
         ystart.focus();
+        Isvalid = false;
     } else {
         ystart.style.border = ' 1px solid green';
     }
@@ -171,11 +190,13 @@ const validate = () => {
         nuerror.innerHTML = 'enter phone number';
         nuerror.style = 'color:red; position:absolute; font-size:0.7em';
         numbr.focus();
-    } else if (!Contact.match(phoneFormat)) {
+        Isvalid = false;
+    } else if (Contact.match(phoneFormat)) {
         numbr.style = 'border-bottom: 1px solid red';
         nuerror.innerHTML = 'only digits';
         nuerror.style = 'color:red; position:absolute; font-size:0.7em';
         numbr.focus();
+        Isvalid = false;
     } else {
         numbr.style.border = ' 1px solid green';
     }
@@ -187,11 +208,13 @@ const validate = () => {
         merr.innerHTML = 'enter email';
         merr.style = 'color:red; position:absolute; font-size:0.7em';
         Email.focus();
+        Isvalid = false;
     } else if (!emailadress.match(emailFormat)) {
         Email.style = 'border-bottom: 1px solid red';
         merr.innerHTML = 'enter email correctly';
         merr.style = 'color:red; position:absolute; font-size:0.7em';
         Email.focus();
+        Isvalid = false;
     } else {
         Email.style.border = ' 1px solid green';
     }
@@ -203,18 +226,28 @@ const validate = () => {
         paserror.innerHTML = 'enter password';
         paserror.style = 'color:red; position:absolute; font-size:0.7em';
         Paswd.focus();
+        Isvalid = false;
     } else if (!Password.match(key)) {
         Paswd.style = 'border-bottom: 1px solid red';
         paserror.innerHTML =
             'should contain uppercase , lowercase and atleast anumber and more than 8 character';
         paserror.style = 'color:red; position:absolute; font-size:0.7em';
         Paswd.focus();
+        Isvalid = false;
     } else {
         Paswd.style.border = ' 1px solid green';
     }
 
+    if (!Isvalid) {
+        event.preventDefault();
+        return false;
+
+    }
 
 };
 
 const myformartist = document.getElementById('formA_C');
-myformartist.addEventListener('submit', validate);
+
+myformartist.addEventListener('submit', (event) => {
+    validate(event);
+});

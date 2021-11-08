@@ -4,8 +4,8 @@ const bandslogan = document.form2.bandslogan;
 const bandsponsers = document.form2.bandsponsers;
 const numberofmembers = document.form2.numberofmembers;
 const members = document.form2.members;
-const bandmail = document.form2.bandmail;
-const bandpassword = document.form2.bandpassword;
+const bandmail = document.form2.email;
+const bandpassword = document.form2.password;
 
 const id1 = document.getElementById('id1');
 const id2 = document.getElementById('id2');
@@ -15,6 +15,7 @@ const id5 = document.getElementById('id5');
 const id6 = document.getElementById('id6');
 const id7 = document.getElementById('id7');
 const id8 = document.getElementById('id8');
+
 
 const nonumber = /^[A-Za-z]+$/;
 const capitalize = /^[A-Z][a-z]/;
@@ -118,17 +119,28 @@ const validateband = () => {
         numberofmembers.style.border = ' 1px solid green';
     }
 
+    //validating the mebers input
+    const BandMbr = members.value;
+    if (BandMbr == '') {
+        BandMbr.style = 'border-bottom: 1px solid red';
+        id5.innerHTML = 'enter names of members';
+        id5.style = 'color:red; position:absolute; font-size:0.7em';
+        numberofmembers.focus();
+    } else {
+        members.style.border = ' 1px solid green';
+    }
+
     //email validation
     const emailadress = bandmail.value.trim();
     if (emailadress == '') {
         bandmail.style = 'border-bottom: 1px solid red';
-        id7.innerHTML = 'enter email';
-        id7.style = 'color:red; position:absolute; font-size:0.7em';
+        id6.innerHTML = 'enter email';
+        id6.style = 'color:red; position:absolute; font-size:0.7em';
         bandmail.focus();
     } else if (!emailadress.match(emailFormat)) {
         bandmail.style = 'border-bottom: 1px solid red';
-        id7.innerHTML = 'enter email correctly';
-        id7.style = 'color:red; position:absolute; font-size:0.7em';
+        id6.innerHTML = 'enter email correctly';
+        id6.style = 'color:red; position:absolute; font-size:0.7em';
         bandmail.focus();
     } else {
         bandmail.style.border = ' 1px solid green';
@@ -138,14 +150,14 @@ const validateband = () => {
     const Password = bandpassword.value.trim();
     if (Password == '') {
         bandpassword.style = 'border-bottom: 1px solid red';
-        id8.innerHTML = 'enter password';
-        id8.style = 'color:red; position:absolute; font-size:0.7em';
+        id7.innerHTML = 'enter password';
+        id7.style = 'color:red; position:absolute; font-size:0.7em';
         bandpassword.focus();
     } else if (!emailadress.match(key)) {
         bandpassword.style = 'border-bottom: 1px solid red';
-        id8.innerHTML =
+        id7.innerHTML =
             'should contain uppercase , lowercase and atleast anumber and more than 8 character';
-        id8.style = 'color:red; position:absolute; font-size:0.7em';
+        id7.style = 'color:red; position:absolute; font-size:0.7em';
         bandpassword.focus();
     } else {
         bandpassword.style.border = ' 1px solid green';

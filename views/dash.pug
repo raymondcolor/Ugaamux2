@@ -67,7 +67,7 @@ nav.navbar.navbar-expand-lg.my-bckgd
 
           td
             form(action='/signinpage/deleteartist' method='post')
-              input(type="hidden" placeholder="" name="id"  value= artist.email)
+              input(type="hidden" placeholder="" name="email"  value= artist.email)
               button.delete(type='submit' value='Delete') 
                i.fa.fa-trash-o(aria-hidden='true')
 
@@ -99,8 +99,8 @@ nav.navbar.navbar-expand-lg.my-bckgd
             a.update(href='/update' +comedian._id) 
               i.fa.fa-pencil(aria-hidden='true')
           td
-            form(action='/delete' method='post')
-              input(type="hidden" placeholder="" name="id"  value= comedian.email)
+            form(action='/signinpage/deletecomedian' method='post')
+              input(type="hidden" placeholder="" name="email"  value= comedian.email)
               button.delete(type='submit' value='Delete') 
                 i.fa.fa-trash-o(aria-hidden='true')
 .dash
@@ -125,11 +125,11 @@ nav.navbar.navbar-expand-lg.my-bckgd
           td
             img(src='/'+band.bandicon height='70px' width='70px')
           td
-            a.update(href='/update' +band._id) 
+            a.update(href='/signinpage/deleteband' +band._id) 
              i.fa.fa-pencil(aria-hidden='true')
           td
             form(action='/delete' method='post')
-              input(type="hidden" placeholder="" name="id"  value= band.email)
+              input(type="hidden" placeholder="" name="email"  value= band.email)
               button.delete(type='submit' value='Delete') 
                i.fa.fa-trash-o(aria-hidden='true')
 

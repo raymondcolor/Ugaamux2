@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const User = require('../models/usermodel');
 const Artistdb = require('../models/artistregistrationmodel');
+const comediandb = require('../models/comedianrgtnmodel');
+const Banddb = require('../models/bandregistrationmodel');
 
 const router = express.Router();
 
@@ -48,12 +50,10 @@ router.get('/logout', (req, res) => {
 });
 
 
+//deleting the registered artist
 router.post('/deleteartist', async(req, res) => {
-
     if (req.session.user) {
-
         try {
-
             await Artistdb.deleteOne({ email: req.body.email });
             await User.deleteOne({ email: req.body.email });
             res.redirect('back');
@@ -67,6 +67,44 @@ router.post('/deleteartist', async(req, res) => {
     }
 
 });
+
+//to delete the registered comedians
+router.post('/deletecomedian', async(req, res) => {
+    if (req.session.user) {
+        try {
+            await comediandb.deleteOne({ email: req.body.email });
+            await User.deleteOne({ email: req.body.email });
+            res.redirect('back');
+
+        } catch (err) {
+            res.send('unable to delete this item', err);
+        }
+    } else {
+        console.log('cant find session');
+        res.redirect('/signinpage/signin');
+    }
+
+});
+
+//deleting the registered bands
+router.post('/deleteband', async(req, res) => {
+    if (req.session.user) {
+        try {
+            await Banddb.deleteOne({ email: req.body.email });
+            await User.deleteOne({ email: req.body.email });
+            res.redirect('back');
+
+        } catch (err) {
+            res.send('unable to delete this item', err);
+        }
+    } else {
+        console.log('cant find session');
+        res.redirect('/signinpage/signin');
+    }
+
+});
+
+
 
 
 
