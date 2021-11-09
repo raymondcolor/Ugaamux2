@@ -52,7 +52,7 @@ const validate = (event) => {
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Bname.focus();
         Isvalid = false;
-    } else if (birthnameC_A.match(nonumber)) {
+    } else if (!birthnameC_A.match(nonumber)) {
         Bname.style = 'border-bottom: 1px solid red';
         BNerror.innerHTML = 'should not contain a number';
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
@@ -66,6 +66,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         Bname.style.border = ' 1px solid green';
+        BNerror.innerHTML = '';
     }
 
     //validation for the stage name
@@ -96,6 +97,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         Sname.style.border = ' 1px solid green';
+        SNerror.innerHTML = '';
     }
 
     //validating  ID
@@ -127,6 +129,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         id.style.border = ' 1px solid green';
+        iderror.innerHTML = '';
     }
 
     //validates 
@@ -145,6 +148,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         nIN.style.border = ' 1px solid green';
+        ninerror.innerHTML = '';
     }
 
     //validates place where they live
@@ -163,6 +167,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         Place.style.border = ' 1px solid green';
+        stays.innerHTML = '';
     }
 
     //when saterted to sing
@@ -181,6 +186,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         ystart.style.border = ' 1px solid green';
+        yerror.innerHTML = '';
     }
 
     //validates number
@@ -199,6 +205,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         numbr.style.border = ' 1px solid green';
+        nuerror.innerHTML = '';
     }
 
     //email validation
@@ -217,6 +224,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         Email.style.border = ' 1px solid green';
+        merr.innerHTML = '';
     }
 
     //validates password
@@ -236,6 +244,7 @@ const validate = (event) => {
         Isvalid = false;
     } else {
         Paswd.style.border = ' 1px solid green';
+        paserror.innerHTML = '';
     }
 
     if (!Isvalid) {

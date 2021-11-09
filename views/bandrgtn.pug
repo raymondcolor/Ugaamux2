@@ -39,7 +39,7 @@ nav.navbar.navbar-expand-lg.my-bckgd
 
 // below is the artist and commedian registration form on the left and band on the right
 .regesteration-band
-  form.form-left(action='/registerband/bandregistration' name='form2' method='post' enctype='multipart/form-data')
+  form.form-left#myform3(action='/registerband/bandregistration' name='form2' method='post' enctype='multipart/form-data')
     h1#band-tittle Band Registration
     .div-iputs
       label(for='bandname')
@@ -82,7 +82,7 @@ nav.navbar.navbar-expand-lg.my-bckgd
     small#id8
     .div-iputs
       input.cuncle-btn(type='reset' value='Cancel')
-      input#myform2.submt-btn2(onclick='validateband()' type='button' value='Create Account')
+      input#myform2.submt-btn2( onclick='validateband()' type='submit' value='Create Account')
 // this is a footer section
 .row
   .footer.col-lg-6.col-md-6.col-sm-12
@@ -114,5 +114,5 @@ nav.navbar.navbar-expand-lg.my-bckgd
       a.footer-link(href='# ') Blog
 .copyright
   p  &amp;#9400Sabiiti Raymond 2021
-script(src='../js/band.js')
-script(src='../Btrp/js/bootstrap.min.js')
+script(src='/js/band.js')
+//- script(src='/Btrp/js/bootstrap.min.js')

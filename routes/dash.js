@@ -6,22 +6,8 @@ const Banddb = require('../models/bandregistrationmodel');
 const comediandb = require('../models/comedianrgtnmodel');
 const User = require('../models/usermodel');
 
-//post blog page
-
-// router.get('/dashboard', async(req, res) => {
-//     if (req.session.user) {
-//         try {
-//             const users = await Artistdb.find();
-//             console.log(users);
-//             res.render('dash', { artists: users });
-//         } catch {
-//             res.status(400).send('Unable to find artists');
-//         }
-//     } else {
-//         res.redirect('/signinpage/signin');
-//     }
-// });
-
+//route for showing data on the dash board page, for all users in the sysem and some of
+//thier data. and this applies to all categories.
 router.get('/dashboard', async(req, res) => {
     try {
         const artists = await Artistdb.find();

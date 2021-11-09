@@ -21,7 +21,7 @@ var storage = multer.diskStorage({
 });
 
 var upload = multer({ storage: storage })
-    //data from the band registration
+    //data from the comedian registration form to the database collection
 router.post('/comedianrgtn', upload.single('photo'), async(req, res) => {
     console.log(req.body);
     try {
@@ -41,6 +41,7 @@ router.post('/comedianrgtn', upload.single('photo'), async(req, res) => {
     }
 });
 
+//handling the the profile detail to be viewed when acomedian logs in respectively
 router.get('/comedianprofile', async(req, res) => {
     if (req.session.user) {
         try {

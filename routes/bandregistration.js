@@ -13,6 +13,7 @@ router.get('/bandregistration', (req, res) => {
     res.render('bandrgtn');
 });
 
+//multer handling the image paht and sending the photo to the folder
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images');
@@ -23,7 +24,7 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage });
 
-//data from the band registration
+//data from the band registration to the database collection for bands
 router.post('/bandregistration', upload.single('bandicon'), async(req, res) => {
     console.log(req.body);
     try {
@@ -46,6 +47,7 @@ router.post('/bandregistration', upload.single('bandicon'), async(req, res) => {
 
 });
 
+//handling the profile details  for the band that logs in respectively.
 router.get('/bandprofile/bndprofile', async(req, res) => {
     if (req.session.user) {
         try {

@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = express.Router();
 
-//post blog page
+//band page for public
 router.get('/band', (req, res) => {
     res.render('../views/band');
 });

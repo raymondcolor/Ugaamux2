@@ -2,7 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = express.Router();
 
-//post blog page
+//update page route.
 router.get('/updateprfle', (req, res) => {
     res.render('update');
 });

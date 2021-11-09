@@ -11,6 +11,7 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
+//handle the storage of the path of the image and sending it in the folders
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images');
@@ -21,6 +22,7 @@ var storage = multer.diskStorage({
 });
 var upload = multer({ storage: storage })
 
+//handling data from the form add sending it the aristdb collection
 router.post('/register', upload.single('artpic'), async(req, res) => {
     console.log(req.body);
     try {
@@ -41,7 +43,7 @@ router.post('/register', upload.single('artpic'), async(req, res) => {
     }
 });
 
-
+//handles the displaying of data for every artist who logs in
 router.get('/profile', async(req, res) => {
     if (req.session.user) {
         try {

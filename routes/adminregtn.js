@@ -10,7 +10,7 @@ router.get('/adminregistration', (req, res) => {
 });
 
 
-//data from the band registration
+//data from the band registration to the the admin database collection
 router.post('/adminregistration', async(req, res) => {
     console.log(req.body);
     try {

@@ -2,9 +2,9 @@ const express = require('express')
 const mongoose = require('mongoose')
 const router = express.Router();
 
-//post blog page
+//route for the artist  page for public
 router.get('/artist', (req, res) => {
-    res.render('../views/artist');
+    res.render('artist');
 });
 
 module.exports = router;
