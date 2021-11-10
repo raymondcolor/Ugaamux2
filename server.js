@@ -95,28 +95,11 @@ app.get('/', (req, res) => {
 app.get('/blog', (req, res) => {
     res.sendFile(__dirname + '/views/blogp.html');
 });
-//vinka route
-app.get('/vinka', (req, res) => {
-    res.sendFile(__dirname + '/views/vinka.html');
-});
-//kenzo route
-app.get('/kenzo', (req, res) => {
-    res.sendFile(__dirname + '/views/kenzo.html');
-});
-//mpamile route
-app.get('/mpamile', (req, res) => {
-    res.sendFile(__dirname + '/views/mpamile.html');
-});
-//afrigo route
-app.get('/afrigo', (req, res) => {
-    res.sendFile(__dirname + '/views/afrigo.html');
-});
+
 //admin welcom
 app.get('/welcomeadmin', (req, res) => {
     res.sendFile(__dirname + '/views/welcom.html');
 });
-
-
 
 app.get('*', (req, res) => {
     res.status(404).send('page not found');

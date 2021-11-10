@@ -58,5 +58,36 @@ router.get('/profile', async(req, res) => {
     }
 });
 
+//route that displays information for aparticular artist whem image clicked
+//this is apage that displays information to public
+router.get('/artistdetails/:id', async(req, res) => {
+
+    try {
+        const user = await Artistdb.findOne({ _id: req.params.id });
+        console.log(user);
+        res.render('artistdetails', { artist: user });
+    } catch {
+        res.status(400).send('Unable to find artist');
+    }
+
+});
+
+
+//udate route
+// router.get('/update/:id', async(req, res) => {
+//     if (req.session.user) {
+//         try {
+//             const user = await Artistdb.findOne({ _id: req.params.id });
+//             console.log(user);
+//             res.render('udate', { artist: user });
+//         } catch {
+//             res.status(400).send('Unable to find artist');
+//         }
+//     } else {
+//         res.redirect('/signinpage/signin');
+//     }
+// });
+
+
 
 module.exports = router;

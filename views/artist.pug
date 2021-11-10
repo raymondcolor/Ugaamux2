@@ -31,66 +31,16 @@ nav.navbar.navbar-expand-lg.my-bckgd
 .small-header
   h2 Artists
 .container
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/ray.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Rayme
-  .person-id(onclick="location.href='/kenzo';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/ken.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Eddy Kenzo
-  .person-id(onclick="location.href='/vinka';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/Vinka.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Vinka
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/tonny.png' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Tonnix
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/cindy.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Cindy
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/A-Pass-10.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Apass
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/shee.png' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Sheebah
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/John-blaq-848x1024.png' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 John Blaq
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/8.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Pallaso
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/artists/b2c.png' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 B2c
+  if artists.length 
+  each artist in artists
+    .person-id(onclick="location.href='#';" style='cursor: pointer;')
+      .person-id-image
+        a(href='/registerartist/artistdetails/'+artist._id)
+         img( src='/'+artist.artpic alt='artist' height='280px' width='280px')
+        .triangle
+      .person-id-name
+        h3 #{artist.stagename}
+  
 // this is a footer section
 .row
   .footer.col-lg-6.col-md-6.col-sm-12

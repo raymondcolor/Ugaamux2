@@ -40,7 +40,7 @@ const validateband = (event) => {
         id1.style = 'color:red; position:absolute; font-size:0.7em';
         bandname.focus();
         Isvalid = false;
-    } else if (!BandN.match(nonumber)) {
+    } else if (BandN.match(nonumber)) {
         bandname.style = 'border-bottom: 1px solid red';
         id1.innerHTML = 'should not contain a number';
         id1.style = 'color:red; position:absolute; font-size:0.7em';
@@ -58,7 +58,7 @@ const validateband = (event) => {
     }
 
     //validates band home
-    const BandH = home.value.trim();
+    const BandH = home.value;
     if (BandH == '') {
         home.style = 'border-bottom: 1px solid red';
         id2.innerHTML = 'enter Bandhome';
@@ -102,7 +102,7 @@ const validateband = (event) => {
         id3.style = 'color:red; position:absolute; font-size:0.7em';
         bandslogan.focus();
         Isvalid = false;
-    } else if (!BandS.match(nonumber)) {
+    } else if (BandS.match(nonumber)) {
         bandslogan.style = 'border-bottom: 1px solid red';
         id3.innerHTML = 'should not contain a number';
         id3.style = 'color:red; position:absolute; font-size:0.7em';

@@ -57,4 +57,17 @@ router.get('/comedianprofile', async(req, res) => {
     }
 });
 
+//route that displays information for aparticular comedian whem image clicked
+//this is a public page
+router.get('/comediandetails/:id', async(req, res) => {
+
+    try {
+        const user = await comediandb.findOne({ _id: req.params.id });
+        console.log(user);
+        res.render('comedianpublic', { comedian: user });
+    } catch {
+        res.status(400).send('Unable to find artist');
+    }
+
+});
 module.exports = router;

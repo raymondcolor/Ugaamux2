@@ -31,66 +31,16 @@ nav.navbar.navbar-expand-lg.my-bckgd
 .small-header-commedy
   h2 Comedians
 .container
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/mc c.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Mariachi
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/mc.jfif' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Alex Muhangi
-  .person-id(onclick="location.href='/mpamile';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/mpamile.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Tr Mpamile
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/presenter.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Presenter
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/kiko.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 madrat &amp; Chiko
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/kapele.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Kapele
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/AM.jpg' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Amooti
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/boys.jfif' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3  Maulana &amp; Reign
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/gandalebs.jfif' alt='artist' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Salvado
-  .person-id(onclick="location.href='#';" style='cursor: pointer;')
-    .person-id-image
-      img(src='/images/commedy/Dickson-Zizinga.jpg' alt='commedian' height='280px' width='280px')
-      .triangle
-    .person-id-name
-      h3 Zizinga
+  if comedians.length 
+  each comedian in comedians
+    .person-id(onclick="location.href='#';" style='cursor: pointer;')
+      .person-id-image
+        a(href='/registercomedian/comediandetails/'+comedian._id)
+         img(src='/'+comedian.photo alt='artist' height='280px' width='280px')
+        .triangle
+      .person-id-name
+        h3 #{comedian.stagename}
+  
 // this is a footer section
 .row
   .footer.col-lg-6.col-md-6.col-sm-12

@@ -52,7 +52,7 @@ const validate = (event) => {
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
         Bname.focus();
         Isvalid = false;
-    } else if (!birthnameC_A.match(nonumber)) {
+    } else if (birthnameC_A.match(nonumber)) {
         Bname.style = 'border-bottom: 1px solid red';
         BNerror.innerHTML = 'should not contain a number';
         BNerror.style = 'color:red; position:absolute; font-size:0.7em';
@@ -77,7 +77,7 @@ const validate = (event) => {
         SNerror.style = 'color:red; position:absolute; font-size:0.7em;';
         Sname.focus();
         Isvalid = false;
-    } else if (!(stagenameC_A.length > 3)) {
+    } else if (!(stagenameC_A.length > 1)) {
         Sname.style = 'border-bottom:1px solid red';
         SNerror.innerHTML = 'should be be more than three letter';
         SNerror.style = 'color:red; position:absolute; font-size:0.7em;';

@@ -63,4 +63,18 @@ router.get('/bandprofile/bndprofile', async(req, res) => {
 });
 
 
+//route that displays information for aparticular band whem image clicked
+//this is apublic page
+router.get('/banddetails/:id', async(req, res) => {
+
+    try {
+        const user = await Banddb.findOne({ _id: req.params.id });
+        console.log(user);
+        res.render('bandpublic', { band: user });
+    } catch {
+        res.status(400).send('Unable to find artist');
+    }
+
+});
+
 module.exports = router;
