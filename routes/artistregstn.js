@@ -11,7 +11,8 @@ router.get('/register', (req, res) => {
     res.render('register');
 });
 
-//handle the storage of the path of the image and sending it in the folders
+//handle the storage of the path of the image and sending it in the folder that was specified 
+//in the deatination path
 var storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images');

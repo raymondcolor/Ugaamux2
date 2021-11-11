@@ -62,7 +62,7 @@ nav.navbar.navbar-expand-lg.my-bckgd
           
            
           td
-            a.update(href='/update'+artist._id)
+            a.update(href='/update/updateprofile/'+artist._id)
              i.fa.fa-pencil(aria-hidden='true')
 
           td
@@ -96,7 +96,7 @@ nav.navbar.navbar-expand-lg.my-bckgd
           td
             img(src='/'+comedian.photo height='70px' width='70px')
           td
-            a.update(href='/update' +comedian._id) 
+            a.update(href='/updateprofile/update' +comedian._id) 
               i.fa.fa-pencil(aria-hidden='true')
           td
             form(action='/signinpage/deletecomedian' method='post')

@@ -84,7 +84,7 @@ app.use('/bandpage', bandb);
 app.use('/artistspage', artists);
 app.use('/bandprofile', Band);
 app.use('/clarkdashboard', dashb);
-app.use('/updateprofile', Update);
+app.use('/update', Update);
 
 
 //home page    
