@@ -62,7 +62,7 @@ nav.navbar.navbar-expand-lg.my-bckgd
           
            
           td
-            a.update(href='/update/updateprofile/'+artist._id)
+            a.update(href='/update/updateprofile/'+artist._id value= artist._id)
              i.fa.fa-pencil(aria-hidden='true')
 
           td
@@ -70,6 +70,8 @@ nav.navbar.navbar-expand-lg.my-bckgd
               input(type="hidden" placeholder="" name="email"  value= artist.email)
               button.delete(type='submit' value='Delete') 
                i.fa.fa-trash-o(aria-hidden='true')
+
+
 
               
               
@@ -162,7 +164,8 @@ nav.navbar.navbar-expand-lg.my-bckgd
       a.footer-link(href='# ') AboutUs
       a.footer-link(href='# ') Blog
 .copyright
-  p  &amp;#9400Sabiiti Raymond 2021
+  p  
+   i.fa.fa-copyright Sabiiti Raymond 2021
 script(src='../js/sign.js')
 script(src='../Btrp/js/bootstrap.min.js ')
 

@@ -350,8 +350,10 @@
         padding-left: 7.5%;
     }
     
-    .copyright p {
-        font-size: 0.7em;
+    .copyright .fa {
+        font-size: 14px;
+        color: white;
+        cursor: text;
     }
     /* 
 This is the quary for mobile responsiveness */
@@ -528,6 +530,22 @@ This is the quary for mobile responsiveness */
         font-size: 1.1em;
     }
     
+    .gpswd a {
+        text-decoration: none;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    .gpswd a:hover {
+        color: #fca311;
+    }
+    
+    .gpswd {
+        margin-top: 14px;
+    }
+    
     .sign-iputs {
         /* This styles my feilds for password and email in form */
         width: 70%;
@@ -550,7 +568,7 @@ This is the quary for mobile responsiveness */
         color: white;
         background-color: #fca311;
         height: 45px;
-        margin-top: 13%;
+        margin-top: 20px;
         font-size: 1.2em;
         border: none;
     }

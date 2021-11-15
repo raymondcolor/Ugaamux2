@@ -21,6 +21,7 @@ var storage = multer.diskStorage({
         cb(null, file.originalname);
     }
 });
+
 var upload = multer({ storage: storage })
 
 //handling data from the form add sending it the aristdb collection
@@ -74,20 +75,6 @@ router.get('/artistdetails/:id', async(req, res) => {
 });
 
 
-//udate route
-// router.get('/update/:id', async(req, res) => {
-//     if (req.session.user) {
-//         try {
-//             const user = await Artistdb.findOne({ _id: req.params.id });
-//             console.log(user);
-//             res.render('udate', { artist: user });
-//         } catch {
-//             res.status(400).send('Unable to find artist');
-//         }
-//     } else {
-//         res.redirect('/signinpage/signin');
-//     }
-// });
 
 
 
