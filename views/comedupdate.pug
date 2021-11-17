@@ -3,7 +3,7 @@ head
   meta(charset='UTF-8')
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  title dashbord
+  title comedian update
   link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
   link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
   link(href='/Btrp/css/bootstrap.min.css' rel='stylesheet')
@@ -41,44 +41,42 @@ nav.navbar.navbar-expand-lg.my-bckgd
             
 
 
+
+
 div.form-row
   div.updatepic
-    img(src='/'+artist.artpic)
-form.updatef(method="post" action="/update/updateprofile/"+artist.email )
+    img(src='/'+comedian.photo)
+form.updatef(method="post" action="/update/comedianupdate/"+comedian.email )
         table.table
             thead
                 tr
                     th Stage name
                     td 
-                       input.form-control( value=artist.stagename name ="stagename")
-                tr
-                    th Number of albums
-                    td 
-                        input.form-control(value=artist.album name ="album")
+                       input.form-control( value=comedian.stagename name ="stagename")
+              
                 tr
                     th Email
                     td 
-                        input.form-control(value=artist.email name ="email")
+                        input.form-control(value=comedian.email name ="email")
                 
                 tr
                     th Contact
                     td 
-                        input.form-control(value=artist.contact name ="contact")
+                        input.form-control(value=comedian.contact name ="contact")
                 tr
                     th District
                     td 
                         select.form-control( name="place")  
-                            option(value="Mbarara" selected = artist.place === "Mbarara"  ) Mbarara
-                            option(value="Kampala" selected = artist.place === "Kampala" ) Kampala
-                            option(value="Gulu" selected = artist.place === "Gulu") Gulu
-                            option(value="Wakiso" selected = artist.place === "Wakiso" ) Wakiso
-                            option(value="Jinja" selected = artist.place === "Jinja" ) Jinja
-                            option(value="Masaka" selected = artist.place === "Masaka" ) Masaka
-                            option(value="Mbale" selected = artist.place === "Mbale" ) Mbale
+                            option(value="Mbarara" selected = comedian.place === "Mbarara"  ) Mbarara
+                            option(value="Kampala" selected = comedian.place === "Kampala" ) Kampala
+                            option(value="Gulu" selected = comedian.place === "Gulu") Gulu
+                            option(value="Wakiso" selected = comedian.place === "Wakiso" ) Wakiso
+                            option(value="Jinja" selected = comedian.place === "Jinja" ) Jinja
+                            option(value="Masaka" selected = comedian.place === "Masaka" ) Masaka
+                            option(value="Mbale" selected = comedian.place === "Mbale" ) Mbale
                 tr
                     td(colspan=2)
                         button.btn.btn-dark.update-btn(type="submit") Update
-
 
 .row
   .footer.col-lg-6.col-md-6.col-sm-12

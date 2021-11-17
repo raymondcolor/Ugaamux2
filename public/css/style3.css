@@ -309,8 +309,28 @@ thead {
     border-radius: 50%;
 }
 
+.updatepicband {
+    height: 400px;
+    width: 500px;
+    margin: auto;
+    margin-left: 30%;
+    margin-top: 10%;
+}
+
+.updatepicband img {
+    height: 400px;
+    width: 600px;
+    border-radius: 30px;
+}
+
 .updatepic img {
     border-radius: 50%;
     height: 250px;
     width: 250px;
+}
+
+.backl {
+    position: absolute;
+    top: 900px;
+    left: 100px;
 }
